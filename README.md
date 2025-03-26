@@ -1,2 +1,2 @@
 # carpenter-gothic
-WordPress Refactor for Client, Pro Bono
+Pro Bono Website build. Portfolio site for client with Strapi CMS integration.
