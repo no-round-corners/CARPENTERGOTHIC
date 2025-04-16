@@ -1,0 +1,7 @@
+:root {
+  --light: #526067;
+  --med: #343d43;
+  --dark: #1f2427;
+  --accent: #bf1c1c;
+  background-color: var(--dark);
+}
