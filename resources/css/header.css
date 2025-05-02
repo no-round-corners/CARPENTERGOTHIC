@@ -1,6 +1,10 @@
+.header {
+  height: 450px;
+}
+
 .banner-images {
   background-color: var(--med);
-  height: 300px;
+  padding: 10px;
 }
 
 /* add background image of house */
@@ -9,17 +13,10 @@
   position: relative;
   top: 0;
   left: 0;
-  width: 35vw;
+  width: 800px;
   margin: auto;
   display: flex;
   align-items: center;
-  z-index: 2;
-}
-
-.banner-images .hammer-logo img {
-  width: 8vw;
-  z-index: 1;
-  margin-top: -5vw;
 }
 
 .socials {

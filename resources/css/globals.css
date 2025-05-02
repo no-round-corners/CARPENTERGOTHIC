@@ -5,4 +5,44 @@
   --accent: #bf1c1c;
   background-color: var(--dark);
 }
-/* need to add fonts and stylings */
+html {
+  font-size: 110%;
+}
+
+@font-face {
+  font-family: "Neodex";
+  src: url(../resources/fonts/Neodex.otf);
+}
+@font-face {
+  font-family: "Chomsky";
+  src: url(../resources/fonts/Chomsky.otf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: "Neodex";
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+
+p {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
