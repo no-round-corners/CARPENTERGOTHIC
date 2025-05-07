@@ -5,8 +5,10 @@
   --accent: #bf1c1c;
   background-color: var(--dark);
 }
-html {
+html * {
   font-size: 110%;
+  padding: 0px;
+  margin: 0px;
 }
 
 @font-face {

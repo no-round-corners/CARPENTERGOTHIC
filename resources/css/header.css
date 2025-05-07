@@ -2,14 +2,20 @@
   height: 450px;
 }
 
-.banner-images {
+.header .banner-images {
   background-color: var(--med);
-  padding: 10px;
 }
 
-/* add background image of house */
+.header .banner-images {
+  background-image: url(../images/house-transparent.PNG);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: 300px;
+  background-blend-mode: lighten;
+}
 
-.banner-images img {
+.header .banner-images img {
   position: relative;
   top: 0;
   left: 0;
@@ -19,18 +25,38 @@
   align-items: center;
 }
 
-.socials {
+.header .socials {
   display: flex;
   margin: auto;
   flex-direction: row;
   justify-content: center;
 }
-.socials object {
-  display: flex;
-  padding: 5px;
-  width: 25px;
+
+.header .socials object {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  padding: 10px;
+  width: 30px;
+}
+.header .social .tiktok object{
+  padding: 0px;
+  width: 50px;
 }
 
-.banner-images img {
-  color: white;
+@media screen and (max-width: 800px) {
+  .header .banner-images {
+    background-image: none;
+  }
+  
+  .header .banner-images img {
+    width: 100%;
+    height: auto;
+  }
+  .header .socials object {
+    /* width: 20px; */
+    height: auto;
+  }
+  
 }

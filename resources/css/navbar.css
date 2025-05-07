@@ -6,3 +6,29 @@
   background-color: var(--light);
 }
 
+.navbar .site-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .site-links a {
+  text-decoration: underline;
+  color: #ffffff;
+  padding: 20px;
+}
+
+
+
+@media (max-width: 500px) {
+  .navbar .site-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+  }
+
+  .navbar .site-links a {
+    padding: 5px;
+  }
+}
