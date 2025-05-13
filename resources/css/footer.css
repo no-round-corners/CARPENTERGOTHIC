@@ -30,7 +30,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .footer .site-links a {
@@ -52,6 +52,6 @@
   text-decoration: none;
   text-align: center;
   color: #ffffff;
-  font-weight: 200;
+  font-weight: 300;
   margin: 10px 5px;
 }
