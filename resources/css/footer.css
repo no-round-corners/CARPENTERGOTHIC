@@ -50,9 +50,18 @@
 
 .footer .watermark a,
 .footer .watermark p {
-  text-decoration: none;
+  /* text-decoration: none; */
   text-align: center;
   color: #ffffff;
   font-weight: 300;
   margin: 10px 5px;
+}
+
+.footer a:hover {
+  color: red;
+  font-style: italic;
+}
+
+.footer .watermark:hover p{
+  color: #fbb614;
 }

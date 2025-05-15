@@ -1,0 +1,69 @@
+/* Basic styling for the ticker */
+.ticker-container {
+  width: 50%; /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+.ticker-container h3 {
+  font-size: 2.5rem; /* Adjust heading size */
+  margin-bottom: 10px;
+}
+
+.ticker-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 50%; /* Match the ticker-container width */
+  margin: auto;
+  cursor: pointer;
+}
+
+/* You might want to add a subtle hover effect */
+.ticker-link:hover .ticker-container {
+  opacity: 0.9;
+  color: red;
+}
+
+.ticker-container {
+  width: 100%; /* Take full width of parent (the link) */
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.ticker-gallery {
+  display: flex;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.ticker-gallery img {
+  height: 300px; /* Adjust image height */
+  margin: 0 10px; /* Spacing between images */
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* @keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+@media (max-width: 800px) {
+  .ticker-container {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .ticker-link {
+    width: 100%; /* Full width on smaller screens */
+  }
+}

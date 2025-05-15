@@ -71,7 +71,18 @@
       </nav>
     </div>
     <div class="storefront">
-      <div class="ticker-gallery"></div>
+      <a
+        href="https://www.etsy.com/shop/carpentergothic"
+        class="ticker-link"
+        aria-label="Visit our Etsy shop"
+      >
+        <div class="ticker-container">
+          <h3 class="title">STOREFRONT</h3>
+          <div class="ticker-gallery" id="tickerGallery">
+            <!-- Images will be added here by JavaScript -->
+          </div>
+        </div>
+      </a>
     </div>
     <div class="statement">
       <h3>
@@ -117,8 +128,13 @@
         </div>
       </div>
       <div class="watermark">
-        <a href="https://mboulos.dev/"><p>built by no round corners</p></a>
+        <a href="https://mboulos.dev/" target="_blank" rel="noopener noreferrer"
+          ><p>built by no round corners</p></a
+        >
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="resources/js/storefront.js"></script>
   </body>
 </html>

@@ -19,13 +19,19 @@
   padding: 20px;
 }
 
+.navbar a:hover {
+  color: red;
+  font-style: italic;
+}
 
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 600px) {
   .navbar .site-links {
     display: flex;
     flex-direction: column;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 
   .navbar .site-links a {
