@@ -1,0 +1,13 @@
+.statement {
+  color: white;
+  max-width: 800px;
+  text-align: center;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .statement {
+    font-size: 1rem;
+  }
+}

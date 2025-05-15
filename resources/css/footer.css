@@ -45,6 +45,7 @@
   justify-content: center;
   align-items: bottom;
   font-size: 0.6rem;
+  font-style: italic;
 }
 
 .footer .watermark a,
