@@ -1,26 +1,42 @@
 .illustrations-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  width: 70vw;
+  margin: auto;
   padding: 20px;
 }
 
-.gallery-grid {
+/* .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
+  align-items: center;
 }
-
 .gallery-grid img {
   width: 100%;
   height: auto;
   display: block;
+  justify-self: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+} */
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Space between items */
+}
+
+.gallery-grid img {
+  width: 250px; /* Set a fixed width for the images */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  flex-grow: 0; /* Allow images to grow to fill space */
+  max-width: 100%; /* Ensure images don't exceed their container */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .gallery-grid img {
+    width: 200px; /* Adjust image width for smaller screens */
   }
 }

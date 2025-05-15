@@ -30,7 +30,7 @@
 
 .ticker-container {
   width: 100%; /* Take full width of parent (the link) */
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   margin-top: 20px;
   color: white;
@@ -39,7 +39,7 @@
 
 .ticker-gallery {
   display: flex;
-  visibility: hidden;
+  /* visibility: hidden; */
   white-space: nowrap;
 }
 
