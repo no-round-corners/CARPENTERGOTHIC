@@ -1,6 +1,6 @@
 /* Basic styling for the ticker */
 .ticker-container {
-  width: 50%; /* Adjust as needed */
+  width: 70%; /* Adjust as needed */
   overflow: hidden;
   position: relative;
   margin: auto;
@@ -17,7 +17,7 @@
   text-decoration: none;
   color: inherit;
   display: block;
-  width: 50%; /* Match the ticker-container width */
+  width: 70%; /* Match the ticker-container width */
   margin: auto;
   cursor: pointer;
 }
