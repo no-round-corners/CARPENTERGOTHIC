@@ -8,7 +8,7 @@ function loadGallery() {
   // Loop through all image numbers
   for (let i = 1; i <= totalImages; i++) {
     // Generate the image URL based on the pattern
-    const imgUrl = `../../resources/illustrations/${i}.png`; // Using relative path
+    const imgUrl = `../../resources/images/illustrations/${i}.png`; // Using relative path
 
     // Create image element
     const imgElement = document.createElement("img");
