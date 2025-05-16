@@ -39,8 +39,10 @@
 
 .ticker-gallery {
   display: flex;
-  /* visibility: hidden; */
+  visibility: visible; /* Changed from hidden */
   white-space: nowrap;
+  will-change: transform; /* Optimize animation performance */
+  transform: translateZ(0); /* Force GPU acceleration */
 }
 
 .ticker-gallery img {
@@ -49,14 +51,15 @@
   flex-shrink: 0; /* Prevent images from shrinking */
 }
 
-/* @keyframes ticker {
+/* Define base keyframes */
+@keyframes infiniteScroll {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
   }
-} */
+}
 
 @media (max-width: 800px) {
   .ticker-container {

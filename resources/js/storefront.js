@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   const tickerGallery = document.getElementById("tickerGallery");
 
+  // Base path adjustment for GitHub Pages
+  const basePath =
+    window.location.hostname === "no-round-corners.github.io"
+      ? "/CARPENTERGOTHIC/"
+      : "/";
+
   const imageUrls = [
     "resources/images/store-photos/chosen.jpeg",
     "resources/images/store-photos/eye.jpeg",
@@ -12,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function createImage(url) {
     const img = document.createElement("img");
-    img.src = url;
+    // Prepend base path for GitHub Pages
+    img.src = `${basePath}${url}`;
     img.alt = "Store Photo";
     return img;
   }
@@ -36,31 +43,47 @@ document.addEventListener("DOMContentLoaded", function () {
         img.onload = resolve;
       });
     })
-  ).then(() => {
-    // Get the width of one complete set of images
-    const oneSetWidth = Array.from(tickerGallery.getElementsByTagName("img"))
-      .slice(0, imageUrls.length)
-      .reduce((width, img) => width + img.offsetWidth + 20, 0);
+  )
+    .then(() => {
+      // Debug info
+      console.log("Images loaded, calculating widths...");
+      console.log("Gallery element:", tickerGallery);
+      console.log("Number of images:", tickerGallery.children.length);
 
-    const keyframes = `
+      const oneSetWidth = Array.from(tickerGallery.getElementsByTagName("img"))
+        .slice(0, imageUrls.length)
+        .reduce((width, img) => {
+          console.log(`Image width: ${img.offsetWidth}`);
+          return width + img.offsetWidth + 20;
+        }, 0);
+
+      console.log("Total width:", oneSetWidth);
+
+      const keyframes = `
       @keyframes infiniteScroll {
         0% { transform: translateX(0); }
         100% { transform: translateX(-${oneSetWidth}px); }
       }
     `;
 
-    // Insert the keyframes into the document
-    const styleSheet = document.createElement("style");
-    styleSheet.textContent = keyframes;
-    document.head.appendChild(styleSheet);
+      // Insert the keyframes into the document
+      const styleSheet = document.createElement("style");
+      styleSheet.textContent = keyframes;
+      document.head.appendChild(styleSheet);
 
-    // Calculate duration based on width (adjust the divisor to change speed)
-    const duration = oneSetWidth / 50;
+      // Calculate duration based on width (adjust the divisor to change speed)
+      const duration = oneSetWidth / 50;
 
-    // Apply the animation with proper settings
-    tickerGallery.style.animation = `infiniteScroll ${duration}s linear infinite`;
+      // Apply the animation with proper settings
+      tickerGallery.style.animation = `infiniteScroll ${duration}s linear infinite`;
 
-    // Make the ticker visible
-    tickerGallery.style.visibility = "visible";
-  });
+      // Make the ticker visible
+      tickerGallery.style.visibility = "visible";
+
+      // Log animation application
+      console.log("Animation applied:", tickerGallery.style.animation);
+    })
+    .catch((error) => {
+      console.error("Animation setup failed:", error);
+    });
 });
