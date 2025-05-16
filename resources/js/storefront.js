@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const tickerGallery = document.getElementById("tickerGallery");
 
   const imageUrls = [
-    "resources/images/store-photos/chosen.jpg",
-    "resources/images/store-photos/eye.JPG",
+    "resources/images/store-photos/chosen.jpeg",
+    "resources/images/store-photos/eye.jpeg",
     "resources/images/store-photos/flowers.jpeg",
     "resources/images/store-photos/glyph.jpeg",
     "resources/images/store-photos/luigi.jpeg",
-    "resources/images/store-photos/stickers1.JPEG",
+    "resources/images/store-photos/stickers1.jpeg",
   ];
 
   function createImage(url) {
