@@ -8,7 +8,7 @@ function loadGallery() {
   // Loop through all image numbers
   for (let i = 1; i <= totalImages; i++) {
     // Generate the image URL based on the pattern
-    const imgUrl = `../../resources/illustrations/${i}.png`; // Adjusted path
+    const imgUrl = `../../resources/illustrations/${i}.png`; // Using relative path
 
     // Create image element
     const imgElement = document.createElement("img");
@@ -17,10 +17,10 @@ function loadGallery() {
     imgElement.loading = "lazy"; // For better performance
 
     // Add error handling for each image
-    imgElement.onerror = function () {
-      console.error(`Failed to load image: ${imgUrl}`);
-      this.src = "../../resources/images/placeholder.jpg"; // Add a placeholder image
-    };
+    // imgElement.onerror = function () {
+    //   console.error(`Failed to load image: ${imgUrl}`);
+    //   this.src = "/resources/images/placeholder.jpg"; // Using absolute path
+    // };
 
     gallery.appendChild(imgElement);
   }

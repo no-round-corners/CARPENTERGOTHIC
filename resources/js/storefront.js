@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Create initial set of images
-  imageUrls.forEach(url => tickerGallery.appendChild(createImage(url)));
+  imageUrls.forEach((url) => tickerGallery.appendChild(createImage(url)));
 
   // Clone the first set of images and append them
   // This creates a seamless loop
   const firstSetImages = Array.from(tickerGallery.children);
-  firstSetImages.forEach(img => {
+  firstSetImages.forEach((img) => {
     const clone = img.cloneNode(true);
     tickerGallery.appendChild(clone);
   });
@@ -42,24 +42,24 @@ document.addEventListener("DOMContentLoaded", function () {
       .slice(0, imageUrls.length)
       .reduce((width, img) => width + img.offsetWidth + 20, 0);
 
-      const keyframes = `
+    const keyframes = `
       @keyframes infiniteScroll {
         0% { transform: translateX(0); }
         100% { transform: translateX(-${oneSetWidth}px); }
       }
     `;
-    
+
     // Insert the keyframes into the document
     const styleSheet = document.createElement("style");
     styleSheet.textContent = keyframes;
     document.head.appendChild(styleSheet);
-    
+
     // Calculate duration based on width (adjust the divisor to change speed)
     const duration = oneSetWidth / 50;
-    
+
     // Apply the animation with proper settings
     tickerGallery.style.animation = `infiniteScroll ${duration}s linear infinite`;
-    
+
     // Make the ticker visible
     tickerGallery.style.visibility = "visible";
   });
