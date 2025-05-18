@@ -138,5 +138,13 @@
 
     <!-- Scripts -->
     <script src="resources/js/storefront.js" defer></script>
+    <script>
+      // Storefront ticker debug helper
+      window.addEventListener('load', function() {
+        const ticker = document.getElementById('tickerGallery');
+        console.log('Ticker element:', ticker);
+        console.log('Computed style:', window.getComputedStyle(ticker).animation);
+      });
+    </script>
   </body>
 </html>

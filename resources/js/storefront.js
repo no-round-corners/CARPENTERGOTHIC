@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Base path adjustment for GitHub Pages
   const basePath =
-    window.location.hostname === "no-round-corners.github.io"
-      ? "/CARPENTERGOTHIC/"
-      : "/";
+    window.location.hostname === "carpentergothic.xyz" ? "/" : "/";
 
   const imageUrls = [
     "resources/images/store-photos/chosen.jpeg",
@@ -47,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(() => {
       // Debug info
       console.log("Images loaded, calculating widths...");
+      console.log("Current hostname:", window.location.hostname);
+      console.log("Base path:", basePath);
       console.log("Gallery element:", tickerGallery);
       console.log("Number of images:", tickerGallery.children.length);
 
@@ -59,23 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log("Total width:", oneSetWidth);
 
-      const keyframes = `
-      @keyframes infiniteScroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-${oneSetWidth}px); }
-      }
-    `;
-
-      // Insert the keyframes into the document
-      const styleSheet = document.createElement("style");
-      styleSheet.textContent = keyframes;
-      document.head.appendChild(styleSheet);
-
-      // Calculate duration based on width (adjust the divisor to change speed)
-      const duration = oneSetWidth / 50;
-
-      // Apply the animation with proper settings
-      tickerGallery.style.animation = `infiniteScroll ${duration}s linear infinite`;
+      // Ensure animation is applied correctly
+      tickerGallery.style.animation = "none"; // Reset animation
+      void tickerGallery.offsetWidth; // Trigger reflow
+      tickerGallery.style.animation = `infiniteScroll ${
+        oneSetWidth / 120
+      }s linear infinite`;
 
       // Make the ticker visible
       tickerGallery.style.visibility = "visible";

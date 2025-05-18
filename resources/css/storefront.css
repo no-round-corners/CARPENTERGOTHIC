@@ -43,6 +43,7 @@
   white-space: nowrap;
   will-change: transform; /* Optimize animation performance */
   transform: translateZ(0); /* Force GPU acceleration */
+  animation: none;
 }
 
 .ticker-gallery img {
@@ -57,7 +58,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
